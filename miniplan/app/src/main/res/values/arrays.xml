@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planSpinner">
+        <item>自习</item>
+        <item>阅读</item>
+        <item>午休</item>
+        <item>编程</item>
+        <item>学英语</item>
+    </string-array>
+
+    <string-array name="timeSpinner">
+        <item>0.5h</item>
+        <item>1.0h</item>
+        <item>1.5h</item>
+        <item>2.0h</item>
+        <item>2.5h</item>
+        <item>3.0h</item>
+    </string-array>
+
+</resources>
+

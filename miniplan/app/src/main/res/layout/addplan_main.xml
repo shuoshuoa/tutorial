@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".AddPlan.AddPlan">
+
+    <include layout="@layout/addplan_title"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="18dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择计划:  "
+                android:layout_gravity="center"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/planSpinner"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:popupBackground="@color/white"></Spinner>
+
+            <Button
+                android:id="@+id/btn_add_plan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="22dp"
+                android:textColor="@color/white"
+                android:background="@drawable/login_btn"
+                android:text="添加计划" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="18dp"
+            android:layout_marginBottom="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="计划时长:  "
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/timeSpinner"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:popupBackground="@color/white"></Spinner>
+
+            <Button
+                android:id="@+id/btn_add_plan_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="22dp"
+                android:text="添加时长"
+                android:textColor="@color/white"
+                android:background="@drawable/login_btn"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray"
+            android:text="0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="18dp"
+            android:layout_marginBottom="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="提醒时间:  "
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#ffffff">
+
+                <com.example.wangs.miniplan.AddPlan.PickerView
+                    android:id="@+id/hour_pv"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp" />
+
+                <TextView
+                    android:id="@+id/hour_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/hour_pv"
+                    android:text="时"
+                    android:textColor="#ffaa33"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
+
+                <com.example.wangs.miniplan.AddPlan.PickerView
+                    android:id="@+id/minute_pv"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
+                    android:layout_toRightOf="@id/hour_tv" />
+
+                <TextView
+                    android:id="@+id/minute_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/minute_pv"
+                    android:text="分"
+                    android:textColor="#ffaa33"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

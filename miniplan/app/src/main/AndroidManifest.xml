@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wangs.miniplan"
+    android:persistent="true">
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="微时光"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Guidance.ViewPagerActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            android:label="Mirco Time">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UpdatePlan"/>
+        <activity android:name=".AllPlans.AllPlans"/>
+        <activity android:name=".AddPlan.AddPlan" />
+        <activity android:name=".DoPlan.DoPlan" />
+        <activity android:name=".DoPlan.Supervise"/>
+        <activity android:name=".CountPlan.CountActivity" />
+        <activity android:name=".DoPlan.IsFinishedPlan" />
+        <activity android:name=".CountPlan.PlanedDetail" />
+        <activity android:name=".Home.HomeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".PieChartAnalyze.PieCharActivity"></activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+        <service
+            android:name=".JianKong.ServiceBlog">
+            <intent-filter>
+                <action android:name="com.example.wangs.miniplan.UpadatePlanAuto.ServiceBlog" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".JianKong.ReceiverAlarm">
+        </receiver>
+
+        <service android:name=".AlarmClock.AlarmClockService">
+            <intent-filter>
+                <action android:name="com.example.wangs.miniplan.AlarmClock.AlarmClockService"></action>
+            </intent-filter>
+        </service>
+        <receiver android:name=".AlarmClock.AlarmReceiver"></receiver>
+        <activity android:name=".AlarmClock.ShowActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

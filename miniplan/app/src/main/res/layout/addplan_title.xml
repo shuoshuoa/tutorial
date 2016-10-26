@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/malachite">
+    <TableRow>
+        <TextView
+            android:id="@+id/tvAddPlan_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="返回"
+            android:textSize="14dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/ghostwhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="添加计划"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/ghostwhite"/>
+
+        <TextView
+            android:id="@+id/tvAddPlan_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="完成"
+            android:textSize="14dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/ghostwhite">
+        </TextView>
+    </TableRow>
+</TableLayout>

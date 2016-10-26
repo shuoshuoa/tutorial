@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/home_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/itemscolumn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/headphoto" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginRight="18dp"
+                android:text="用户名："
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="请输入..."
+                android:textColor="@color/salmon"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:text="励志铭："
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/etSaying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="坚持，坚持，再坚持..."
+                android:textColor="@color/salmon"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="坚持天数："
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvHoldDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="40"
+                android:textColor="@color/salmon"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="天"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/layout_top"
+        android:background="@color/black6e"
+        android:paddingTop="6dp"
+        >
+
+        <ListView
+            android:id="@+id/home_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="vertical"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="8dp" />
+        <!-- 一定要将divider设置为@null,dividerHeight控制卡片上下距离 -->
+    </FrameLayout>
+
+</RelativeLayout>

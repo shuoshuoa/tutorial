@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/supervise_title"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/my_edittext_style"
+            android:hint="设置验证密码"
+            android:textSize="15dp"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:password="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/password1"
+            style="@style/my_edittext_style"
+            android:hint="确认验证密码"
+            android:textSize="15dp"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:password="true" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

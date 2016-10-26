@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/count_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_margin="10dp"
+            android:background="@color/gainsboro"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="计划完成进度："
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvRate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="fill"
+                android:text="3/5"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="已执行计划"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/itemscolumn" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/top_layout">
+
+        <ListView
+            android:id="@+id/planedList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#01070908"
+            android:divider="#1fbca0c3"
+            android:dividerHeight="1dp"
+            android:fadingEdge="vertical"></ListView>
+    </LinearLayout>
+</RelativeLayout>

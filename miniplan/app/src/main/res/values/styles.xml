@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="my_edittext_style" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/selector_edittext_bg</item>
+    </style>
+
+    <style name="default_animation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/default_anim_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_stay</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_stay</item>
+        <item name="android:activityCloseExitAnimation">@anim/default_anim_out</item>
+    </style>
+
+
+</resources>

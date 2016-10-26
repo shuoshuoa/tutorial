@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="13dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="13dp">
+
+        <ImageView
+            android:id="@+id/planedView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_book_brown_300_36dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="18dp">
+
+            <TextView
+                android:id="@+id/planedName"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="读书 "
+                android:textColor="@color/fuscous_gray"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/planedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="1:30"
+                android:textColor="@color/slategray"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.example.wangs.miniplan.CountPlan.HorizontalProgressBarWithNumber
+                    android:id="@+id/progress"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:max="100"
+                    zhy:progress_text_color="@color/firebrick" />
+                <!--<ProgressBar-->
+                <!--android:id="@+id/progress"-->
+                <!--style="?android:attr/progressBarStyleHorizontal"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:max="100"-->
+                <!--android:progress="10" />-->
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_star_rate_red_700_36dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

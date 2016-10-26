@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:descendantFocusability="beforeDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/card_listview_selector"
+        android:descendantFocusability="afterDescendants">>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_planName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:text="背单词"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/home_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:textSize="13dp"
+                android:text="最近执行 2016 04.03  已坚持13天"
+                />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/home_signal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingRight="13dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/yindao1"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
